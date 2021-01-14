@@ -8,4 +8,16 @@ class CoffeeMaker
     }
 }
 
+class SpecialtyCoffeeMaker extends CoffeeMaker
+{
+    public function brewLatte()
+    {
+        var_dump('Brewing the latte');
+    }
+}
+
 (new CoffeeMaker())->brew();
+
+(new SpecialtyCoffeeMaker())->brewLatte();
+
+(new SpecialtyCoffeeMaker())->brew();
